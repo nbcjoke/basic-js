@@ -1,5 +1,3 @@
-import { NotImplementedError } from '../extensions/index.js';
-
 /**
  * Given an email address, return it's domain.
  *
@@ -10,7 +8,12 @@ import { NotImplementedError } from '../extensions/index.js';
  * For the input 'prettyandsimple@example.com', the output should be 'example.com'
  *
  */
-export default function getEmailDomain(/* email */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function getEmailDomain(email) {
+  let e = email;
+  e = e.split('');
+  const n = e.lastIndexOf('@');
+  e = e.slice(n + 1);
+  return e.join('');
 }
+
+module.exports = getEmailDomain;
