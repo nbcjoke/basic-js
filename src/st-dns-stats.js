@@ -44,4 +44,3 @@ export default function getDNSStats(domains) {
   }
   return obj;
 }
-module.exports = getDNSStats;
